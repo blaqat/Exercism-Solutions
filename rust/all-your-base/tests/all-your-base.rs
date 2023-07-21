@@ -13,6 +13,18 @@ fn single_bit_one_to_decimal() {
 }
 
 #[test]
+fn test_digits() {
+    let input_base = 10;
+    let input_digits = &[4, 5, 6];
+    let output_base = 8;
+    let output_digits = vec![5];
+    assert_eq!(
+        ayb::convert(input_digits, input_base, output_base),
+        Ok(output_digits)
+    );
+}
+
+#[test]
 #[ignore]
 fn binary_to_single_decimal() {
     let input_base = 2;
