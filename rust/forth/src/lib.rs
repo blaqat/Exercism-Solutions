@@ -52,6 +52,7 @@ pub struct Forth {
 impl Forth {
     pub fn new() -> Self {
         let mut idents = HashMap::new();
+
         idents.insert("+".into(), vec![TokenTypes::Op("_add".into())]);
         idents.insert("-".into(), vec![TokenTypes::Op("_sub".into())]);
         idents.insert("/".into(), vec![TokenTypes::Op("_div".into())]);
